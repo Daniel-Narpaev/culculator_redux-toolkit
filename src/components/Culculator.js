@@ -1,22 +1,22 @@
-import { culculattorActionTypes, } from '../store/culculator/culculatorReduser';
 import classes from './Counter.module.css';
 import { useDispatch, useSelector } from 'react-redux'
+import { culculatorActions } from '../store/slice/culculatorSlice';
 
 const Culculator = () => {
 const result = useSelector((state)=>state.culculator.result)
 const dispatch = useDispatch()
-
+console.log(result);
 const addHanler = () => {
-  dispatch({type: culculattorActionTypes.ADD, payload: 5 })
+  dispatch(culculatorActions.add(5))
 }
 const subtrctHanler = () => {
-  dispatch({type: culculattorActionTypes.SUBTRACT, payload: 10 })
+  dispatch(culculatorActions.subtract(10))
 }
 const myltiplyHanler = () => {
-  dispatch({type: culculattorActionTypes.MULTIPLY, payload: 2 })
+  dispatch(culculatorActions.multiply(2))
 }
 const divideHanler = () => {
-  dispatch({type: culculattorActionTypes.DIVIDE, payload: 4 })
+  dispatch(culculatorActions.divide(4))
 }
   return (
     <main className={classes.counter}>

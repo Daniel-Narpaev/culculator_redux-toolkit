@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { authActionType } from '../store/auth/AuthReduser';
+import { authActions } from '../store/slice/AuthSlice';
 import classes from './Header.module.css';
 
 const Header = () => {
@@ -18,7 +18,7 @@ const Header = () => {
             <a href='/'>My Sales</a>
           </li>
           <li>
-            <button onClick={() => dispatch({type:authActionType.LOG_OUT})}>Logout</button>
+            <button onClick={() => dispatch(authActions.logout())}>Logout</button>
           </li>
         </ul>
       </nav>)}

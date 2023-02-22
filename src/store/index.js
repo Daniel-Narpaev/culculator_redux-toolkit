@@ -1,13 +1,11 @@
-import { combineReducers, createStore } from "redux";
-import { culculatorReducer } from "./culculator/culculatorReduser";
-import { AuthReduser } from "./auth/AuthReduser";
+import { combineReducers } from "redux";
+import authSlice from "./slice/AuthSlice";
+import { configureStore } from "@reduxjs/toolkit";
+import culculatorSlice from "./slice/culculatorSlice";
 
 const rootReduser = combineReducers({
-    culculator: culculatorReducer,
-    auth:AuthReduser,
+    [culculatorSlice.name]:culculatorSlice.reducer,
+    [authSlice.name]:authSlice.reducer,
 })
-export const store = createStore(rootReduser)
+export const store = configureStore({reducer:rootReduser})
 
-store.subscribe(()=>{
-    console.log('store changed', store.getState());
-})
