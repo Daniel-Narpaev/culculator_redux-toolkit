@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/culculator_redux-toolkit/static/css/main.46d11cae.css",
+    "main.js": "/culculator_redux-toolkit/static/js/main.8d756d53.js",
+    "index.html": "/culculator_redux-toolkit/index.html",
+    "main.46d11cae.css.map": "/culculator_redux-toolkit/static/css/main.46d11cae.css.map",
+    "main.8d756d53.js.map": "/culculator_redux-toolkit/static/js/main.8d756d53.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46d11cae.css",
+    "static/js/main.8d756d53.js"
+  ]
+}
